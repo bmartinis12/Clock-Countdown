@@ -1,0 +1,229 @@
+/* Reset browser css */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Body */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif ;
+}
+
+/* Background video */
+
+.bg-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Clock */
+
+.clock-face {
+    width: 80vmin;
+    height: 80vmin;
+    border: 5px double white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.clock-face::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.clock-heading {
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 25vmin;
+}
+
+.countdown {
+    text-align: center;
+}
+
+.countdown-heading {
+    font-weight: 100;
+    font-size: 18px;
+    margin-bottom: 3vmin;
+}
+
+.countdown-body {
+    display: flex;
+    font-size: 26px;
+    margin-bottom: 1vmin;
+}
+
+.clock-hand {
+    background-color: white;
+    position: absolute;
+    bottom: calc(50% - 40px);
+}
+
+.hours {
+    width: 4px;
+    height: 25vmin;
+    left: calc(50% - 2px);
+    transform-origin: 2px calc(100% - 40px);
+}
+
+.minutes {
+    width: 4px;
+    height: 35vmin;
+    left: calc(50% - 2px);
+    transform-origin: 2px calc(100% - 40px);
+}
+
+.seconds {
+    width: 2px;
+    height: 40vmin;
+    left: calc(50% - 1px);
+    transform: rotate(45deg);
+    transform-origin: 1px calc(100% - 40px);
+}
+
+.popup-menu {
+    font-size: 20px;
+}
+
+.popup-menu:hover {
+    cursor: pointer;
+}
+
+/* Settings */
+
+.settings {
+    width: 80vmin;
+    height: 80vmin;
+    position: absolute;
+    color: white;
+    background-color: black;
+    z-index: 5;
+    border-radius: 50%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back {
+    color: red;
+    font-size: 26px;;
+    margin-bottom: 10vmin;
+}
+
+.settings p {
+    margin-bottom: 3vmin;
+    font-size: 18px;
+    text-align: center;
+}
+
+.settings input {
+    color: black;
+    outline: none;
+    width: 50vmin;
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+
+/* Media Query */
+
+@media (max-width: 470px){
+
+.hours {
+    width: 4px;
+    height: 35vmin;
+    left: calc(50% - 2px);
+    transform-origin: 2px calc(100% - 40px);
+}
+
+.minutes {
+    width: 4px;
+    height: 43Clocvmin;
+    left: calc(50% - 2px);
+    transform-origin: 2px calc(100% - 40px);
+}
+
+.seconds {
+    width: 2px;
+    height: 50vmin;
+    left: calc(50% - 1px);
+    transform: rotate(45deg);
+    transform-origin: 1px calc(100% - 40px);
+}
+
+}

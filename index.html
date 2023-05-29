@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e874c4d243.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Clock & Countdown</title>
+</head>
+<body>
+    <div class="bg-container">
+        <video src="mp4/bg.mp4" class="bg-video" autoplay muted loop></video>
+    </div>
+    <div class="clock">
+        <div class="clock-face">
+            <h1 class="clock-heading">Clock</h1>
+            <div class="clock-hands">
+                <div class="clock-hand hours"></div>
+                <div class="clock-hand minutes"></div>
+                <div class="clock-hand seconds"></div>
+            </div>
+            <div class="countdown">
+                <h2 class="countdown-heading">Time Left</h2>
+                <div class="countdown-body">
+                    <div class="countdown-days">10</div>:
+                    <div class="countdown-hours">20</div>:
+                    <div class="countdown-minutes">30</div>:
+                    <div class="countdown-seconds">46</div>
+                </div>
+                <div class="popup-menu"><i class="fa-solid fa-gear"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="settings">
+        <p><i class="fa fa-arrow-left back"></i></p>
+        <p>Change Countdown Date:</p>
+        <input type="datetime-local" id="user-input-date">
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
